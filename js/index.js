@@ -26,7 +26,29 @@ const date =new Date();
    document.getElementById("current-day").innerText=currentDay;
    document.getElementById("current-date").innerText=currentDate;
    
-  
+  //**************************************************** */
+
+
+document.getElementById("navcolor-btn")
+.addEventListener("click",function(event){
+
+    let red =Math.floor(Math.random() * 256)
+    let green =Math.floor(Math.random() * 256)
+    let blue =Math.floor(Math.random() * 256)
+
+    const rgbColor =`rgb(${red+","+green+","+blue})`
+    
+    document.getElementById("body").style.backgroundColor=rgbColor;
+    
+})
+
+//*********************************************************************** */
+
+document.getElementById("history-btn")
+.addEventListener("click",function(event){
+    let check =document.getElementById("history-container").style.display="none";
+    console.log(check)
+})
 
 
 //******************************************************** */
@@ -35,6 +57,7 @@ const completedBtn =document.querySelectorAll(".completed-btn  ")
 for (let i = 0; i < completedBtn.length; i++){
     completedBtn[i].addEventListener("click",function(event){
         alert("Board Updated Succesfully");
+        
 
         completedBtn[i].setAttribute("disabled",true);
 
@@ -43,6 +66,10 @@ for (let i = 0; i < completedBtn.length; i++){
 
         const navNumber=convertedElementStringToNumber("navNumber");
         document.getElementById("navNumber").innerText=navNumber+1;
+
+        if(taskAssignedNumber==1){
+            alert("Congrates!!! You have completed all the current task.")
+        }
 
     })
 }

@@ -4,3 +4,6 @@ function convertedElementStringToNumber (id){
     const convertedValue=parseFloat(value);
     return convertedValue;
 }
+
+//************************************** */
+
