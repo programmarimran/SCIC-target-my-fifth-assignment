@@ -5,6 +5,52 @@ document.getElementById("question-btn")
 })
 //****************************************************** */
 
+
+// document.getElementById("current-date").innerText=currentDate
+// const currentDate =new Date()
+
+// let tsrik =currentDate.getDate()
+// let mas =currentDate.getMonth()
+// let year=currentDate.getFullYear()
+// const fulldateandtime ={tsrik,mas,year}
+// console.log(fulldateandtime)
+
+
+// const date = new Date();
+
+// let day = date.getDate();
+// let month = date.getMonth() + 1;
+// let year = date.getFullYear();
+
+// // This arrangement can be altered based on how we want the date's format to appear.
+// let currentDate = `${day}-${month}-${year}`;
+// console.log(currentDate); // "17-6-2022"
+
+
+// document.getElementById("current-date").innerText=currentDate
+
+
+
+// let kkk =moment()
+// console.log(kkk)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//******************************************************** */
 const completedBtn =document.querySelectorAll(".completed-btn  ")
 
 for (let i = 0; i < completedBtn.length; i++){
@@ -18,28 +64,6 @@ for (let i = 0; i < completedBtn.length; i++){
 
         const navNumber=convertedElementStringToNumber("navNumber");
         document.getElementById("navNumber").innerText=navNumber+1;
-//************************************************************ */
-const cardTitle =document.querySelectorAll(".card-title");
 
-const historyContainer =document.getElementById("history-container");
-const comment =document.createElement("div");
-const titleLengthNumber=[]
-for(let j = 0; j < cardTitle.length ; j++){
-    const title =cardTitle[j].innerText;
-    
-    const length=title.length;
-    titleLengthNumber.push(length)
-
-   
-
-for(const number of titleLengthNumber){
-
-   comment.innerHTML=`<p class="bg-themecolor rounded-lg m-6 p-3 font-normal text-base text-descriptioncolor">You have Complete The Task ${title.length==number?title:``} at 12:48:15 PM </p>`
-        console.log(number)
-}
-}
-  
-
-historyContainer.appendChild(comment);
     })
 }
