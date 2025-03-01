@@ -5,49 +5,26 @@ document.getElementById("question-btn")
 })
 //****************************************************** */
 
-
-// document.getElementById("current-date").innerText=currentDate
-// const currentDate =new Date()
-
-// let tsrik =currentDate.getDate()
-// let mas =currentDate.getMonth()
-// let year=currentDate.getFullYear()
-// const fulldateandtime ={tsrik,mas,year}
-// console.log(fulldateandtime)
-
-
-// const date = new Date();
-
-// let day = date.getDate();
-// let month = date.getMonth() + 1;
-// let year = date.getFullYear();
-
-// // This arrangement can be altered based on how we want the date's format to appear.
-// let currentDate = `${day}-${month}-${year}`;
-// console.log(currentDate); // "17-6-2022"
-
-
-// document.getElementById("current-date").innerText=currentDate
-
-
-
-// let kkk =moment()
-// console.log(kkk)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const date =new Date();
+    const spliteddd =date.toString()
+    let dateSplite =spliteddd.split(" ");
+    let aipaisi =dateSplite.splice(0,4)
+    let tarik =""
+    for(let i of aipaisi){
+        
+        tarik +=i
+        console.log(tarik)
+    }
+   
+   let day=tarik.slice(0,3)
+   let month=tarik.slice(3,6)
+   let date1=tarik.slice(6,8)
+   let year1=tarik.slice(8,12)
+   
+   const currentDate=`${month}-${date1}-${year1}`
+   const currentDay=`${day},`
+   document.getElementById("current-day").innerText=currentDay
+   document.getElementById("current-date").innerText=currentDate
 
 
 //******************************************************** */
