@@ -13,18 +13,20 @@ const date =new Date();
     for(let i of aipaisi){
         
         tarik +=i
-        console.log(tarik)
+        
     }
    
-   let day=tarik.slice(0,3)
-   let month=tarik.slice(3,6)
-   let date1=tarik.slice(6,8)
-   let year1=tarik.slice(8,12)
+   let day=tarik.slice(0,3);
+   let month=tarik.slice(3,6);
+   let date1=tarik.slice(6,8);
+   let year1=tarik.slice(8,12);
    
-   const currentDate=`${month}-${date1}-${year1}`
-   const currentDay=`${day},`
-   document.getElementById("current-day").innerText=currentDay
-   document.getElementById("current-date").innerText=currentDate
+   const currentDate=month+"-"+date1+"-"+year1;
+   const currentDay=day+" ,";
+   document.getElementById("current-day").innerText=currentDay;
+   document.getElementById("current-date").innerText=currentDate;
+   
+  
 
 
 //******************************************************** */
