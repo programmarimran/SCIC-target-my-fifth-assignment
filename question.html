@@ -27,10 +27,14 @@
       }
     </style>
    
-    
+   <style>
+    .fonts-poppins{
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
 </head>
-<body class="bg-[#F4F7FF] pt-1 pb-8">
-    <div class="font-poppins max-w-screen-2xl mx-auto ">
+<body class="fonts-poppins bg-[#F4F7FF] pt-1 pb-8">
+    <div class="max-w-screen-2xl mx-auto ">
         <!-- header section is start -->
     <header class="w-11/12 mx-auto">
         <section class="flex justify-between items-center my-6 p-6 bg-white rounded-xl">
@@ -42,7 +46,7 @@
                     <h1 class="font-light text-titlecolor text-4xl">Dev<span class="font-bold">Board</span></h1>
                 </div>
             </div>
-            <button class="btn btn-primary text-2xl py-8 rounded-xl px-6 border-none bg-primarycolor">Back to Desk</button>
+            <button id="btn" class="btn btn-primary text-2xl py-8 rounded-xl px-6 border-none bg-primarycolor">Back to Desk</button>
         </section>
     </header>
     <!-- main section is start -->
@@ -97,6 +101,11 @@
         </div>
     </main>
 
-    
+    <script>
+        document.getElementById("btn")
+        .addEventListener("click",function(){
+            window.location.href="index.html"
+        })
+    </script>
 </body>
 </html>
