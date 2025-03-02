@@ -28,11 +28,11 @@ const date =new Date();
    document.getElementById("current-date").innerText=currentDate;
 
    //***********************Set current time*********************************** */
-    let currnentTime=date.toLocaleString()
-    const timeArry=currnentTime.split(" ")
+    // let currnentTime=date.toLocaleString()
+    // const timeArry=currnentTime.split(" ")
 
-    const time =timeArry.slice(1,2)
-    const timeAmOrPm =timeArry.slice(2,3)
+    // const time =timeArry.slice(1,2)
+    // const timeAmOrPm =timeArry.slice(2,3)
 
     // const localTime =time.toString()
 

@@ -2,6 +2,13 @@ for(let btn of completedBtn){
     btn.addEventListener("click",function(event){
 
 
+
+        const dateTime=new Date();
+        let currnentTime=dateTime.toLocaleString()
+        const timeArry=currnentTime.split(" ")
+    
+        const time =timeArry.slice(1,2)
+        const timeAmOrPm =timeArry.slice(2,3)
        
         const title =event.target.parentNode.parentNode.children[1].innerText;
 
