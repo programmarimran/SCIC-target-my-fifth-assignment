@@ -1,13 +1,14 @@
-//************************************************ */
+//*******************Connect Question page***************************** */
 document.getElementById("question-btn")
 .addEventListener("click",function(){
     window.location.href="question.html"
 })
-//****************************************************** */
+//***********************Set Current Date and time ******************************* */
 
 const date =new Date();
     const spliteddd =date.toString()
     let dateSplite =spliteddd.split(" ");
+    // console.log(dateSplite)
     let aipaisi =dateSplite.splice(0,4)
     let tarik =""
     for(let i of aipaisi){
@@ -25,8 +26,17 @@ const date =new Date();
    const currentDay=day+" ,";
    document.getElementById("current-day").innerText=currentDay;
    document.getElementById("current-date").innerText=currentDate;
-   
-  //**************************************************** */
+
+   //***********************Set current time*********************************** */
+    let currnentTime=date.toLocaleString()
+    const timeArry=currnentTime.split(" ")
+
+    const time =timeArry.slice(1,2)
+    const timeAmOrPm =timeArry.slice(2,3)
+
+    // const localTime =time.toString()
+
+  //***********************Set randomly color document body***************************** */
 
 
 document.getElementById("navcolor-btn")
@@ -42,12 +52,17 @@ document.getElementById("navcolor-btn")
     
 })
 
-//*********************************************************************** */
+//*****************************History button click clear all comment****************************************** */
 
 document.getElementById("history-btn")
 .addEventListener("click",function(event){
-    let check =document.getElementById("history-container").style.display="none";
-    console.log(check)
+    // document.getElementById("history-container").style.display="none";
+     const comments=document.getElementsByClassName("dynamicComment");
+    for(const comment of comments){
+        comment.style.display="none"
+    }
+    
+    
 })
 
 
@@ -57,8 +72,7 @@ const completedBtn =document.querySelectorAll(".completed-btn  ")
 for (let i = 0; i < completedBtn.length; i++){
     completedBtn[i].addEventListener("click",function(event){
         alert("Board Updated Succesfully");
-        
-
+       
         completedBtn[i].setAttribute("disabled",true);
 
         const taskAssignedNumber=convertedElementStringToNumber("task-assigned");
