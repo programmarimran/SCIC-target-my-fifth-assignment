@@ -2,14 +2,43 @@ for(let btn of completedBtn){
     btn.addEventListener("click",function(event){
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        const titleArry=['Review Ami Probashi Site',
+            'Integrate AI search',
+            'Fix Video Loading Issue',
+            'Add new reaction 🙌',
+            'Add Pay Success Modal',
+            'Fix Mobile Button Issue'
+
+        ]
         
+
+        
+
 
         const cardTitle=document.getElementsByClassName("card-title");
+       
         for(const title of cardTitle){
-           
+        
+            titleArry.push(title.innerText)
+
+
         
 
-            
+
         const historyContainer=document.getElementById("history-container");
 
         const dynamicComment =document.createElement("div")
@@ -21,11 +50,16 @@ for(let btn of completedBtn){
         </p>
         `
 
-   
+    
         historyContainer.appendChild(dynamicComment)
-
-   
+    
+        
     }
+    
+   
+
+
+
 
     })
 }
